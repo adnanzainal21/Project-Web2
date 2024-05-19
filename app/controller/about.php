@@ -15,12 +15,17 @@
     //         $this -> view('teamplate/footer');
     //     }
     // } ;
-        class About{
+        class About extends controller{
             public function index ($nama = 'Adnan Zainal Arifin', $pekerjaan = 'Mahasiswa Ndoning', $umur = '18'){
-                echo "nama saya $nama saya seorang $pekerjaan , saya berumur $umur";
+                // echo "nama saya $nama saya seorang $pekerjaan , saya berumur $umur";
+                $data ['nama'] = $nama;
+                $data ['pekerjaan'] = $pekerjaan;
+                $data ['umur'] = $umur;
+                $this-> view('about/index', $data);
             }
             public function page (){
-                echo 'About/page';
+                // echo 'About/page';
+                $this-> view('about/page');
             }
         }
 ?>
